@@ -1,0 +1,154 @@
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  /* Font */
+  --Font: "Poppins", sans-serif;
+}
+
+/** Reset **/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--Font);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--Very-Dark-Blue);
+  text-align: center;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+p {
+  color: var(--Grayish-Blue);
+}
+
+/** Feature Card **/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-section {
+  width: 335px;
+  margin: 4rem auto;
+}
+
+.feature-section > span {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.feature-section h1 {
+  font-weight: 600;
+}
+
+.feature-section > p {
+  margin-top: 1rem;
+}
+
+.feature-cards {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-card {
+  border-radius: 0.3rem;
+  box-shadow: 0px 10px 25px -15px rgba(0, 0, 0, 0.75);
+  text-align: start;
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.feature-card img {
+  width: 4.25rem;
+  height: 4.25rem;
+  display: block;
+  margin-top: 2.8rem;
+  align-self: flex-end;
+}
+
+.feature-medium-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-card:first-of-type {
+  border-top: medium solid var(--Cyan);
+}
+
+.feature-card:last-of-type {
+  border-top: medium solid var(--Blue);
+}
+
+.feature-card.medium:first-of-type {
+  border-top: medium solid var(--Red);
+}
+
+.feature-card.medium:last-of-type {
+  border-top: medium solid var(--Orange);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/** MediaQueries **/
+@media screen and (min-width: 1200px) {
+  .feature-section {
+    width: 100%;
+  }
+
+  .feature-section > span,
+  .feature-section h1 {
+    font-size: 2rem;
+  }
+
+  .feature-section > p {
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-cards {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
